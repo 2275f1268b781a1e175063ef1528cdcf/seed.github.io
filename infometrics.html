@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berith Jeshurun aka Arcade</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;500&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            color: #ffffff;
+            background-color: #0b0c10;
+            background: linear-gradient(135deg, #0b0c10 0%, #1f2833 100%);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #1f2833;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 0 20px #00ffcc;
+            border-bottom: 2px solid #45a29e;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: #66fcf1;
+            font-size: 4em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-color: #0b0c10;
+            box-shadow: 0 2px 10px #45a29e;
+            border-bottom: 2px solid #45a29e;
+        }
+
+        nav a {
+            color: #66fcf1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #66fcf1;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #1f2833;
+            box-shadow: 0 0 30px #66fcf1;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, transparent 20%, rgba(102, 252, 241, 0.15) 50%, transparent 80%);
+            animation: rotate 6s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        section h2 {
+            color: #66fcf1;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: justify;
+            z-index: 1;
+            position: relative;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: '>';
+            margin-right: 10px;
+            color: #66fcf1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #1f2833;
+            color: #c5c6c7;
+            box-shadow: 0 -2px 20px #66fcf1;
+        }
+
+        footer p {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Berith Jeshurun aka Arcade</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Berith Jeshurun, also known as Arcade. I am a passionate programmer, graphic designer, and musician with a keen interest in high-tech sci-fi aesthetics. With fluency in multiple programming languages and a deep understanding of various operating systems, I create innovative software solutions, including custom scripting languages and AI-driven chatbots. In addition to my technical expertise, I am also a skilled musician, composing music using industry-standard software.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming: C, C++, C#, Batch, VBS, HTML, CSS, JS</li>
+            <li>Python: Fluency in Python for backend and frontend development</li>
+            <li>Graphic Design: UI/UX design using PySide6, PyQt5/6, tkinter, Qt Designer, Kivy</li>
+            <li>Backend: Python using Flask</li>
+            <li>Frontend: JavaScript</li>
+            <li>Music: Keyboard, Drums, Guitar</li>
+            <li>Music Composition: FL Studio, Abelton Live, Cubase</li>
+            <li>OS Knowledge: Linux (Debian, Ubuntu), macOS, Windows</li>
+            <li>Custom Languages: Created scripting languages (.nebula) and a language called "7 language"</li>
+            <li>AI & Chatbots: Developed a ChatBot+AI named RiSA</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>My portfolio showcases a range of projects, from software development to music composition. Stay tuned for updates as I continue to work on new and exciting ventures.</p>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Berith Jeshurun aka Arcade</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
